@@ -62,14 +62,16 @@ void start(){
 		
 		std::cout << "Key:" << std::endl;
 		std::cin >> sKey;
-		std::cin.ignore();
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
 		if(sKey < 0 | sKey > 25){
 			std::cout << "Please, enter a valid key\n" << std::endl;
 			continue;
 		}
 		std::cout << "\nChoice:" << "\n1. Encrypt" << "\n2. Decrypt" << std::endl;
 		std::cin >> sChoice;
-		std::cin.ignore();
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
 		if(sChoice == 1){
 			std::cout << "\nText:" << std::endl;
 			getline(std::cin, text);
@@ -85,4 +87,3 @@ void start(){
 		
 	}
 }
-
